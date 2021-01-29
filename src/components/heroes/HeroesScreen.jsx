@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { Redirect, useParams } from "react-router-dom";
 import { getHeroeById } from "../../selectors/getHeroById";
 
 export const HeroesScreen = ({ history }) => {
   const { heroeId } = useParams();
-  const hero = getHeroeById(heroeId);
+  const hero = useMemo(() => getHeroeById(heroeId), [heroeId]);
+
   if (!hero) {
     return <Redirect to="/" />;
   }
+
   const {
     superhero,
     publisher,
@@ -15,6 +17,7 @@ export const HeroesScreen = ({ history }) => {
     first_appearance,
     characters,
   } = hero;
+
   const handleClick = () => {
     if (history.length <= 2) {
       history.push("/");
