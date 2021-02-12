@@ -2,7 +2,6 @@
   "homepage": "https://jhosep98.github.io/heroes-dc-marvel",
   "name": "heroes-dc-marvel",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
