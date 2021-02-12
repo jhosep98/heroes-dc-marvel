@@ -4,7 +4,7 @@ import { PrivateRoute } from "./PrivateRoute";
 import { AuthContext } from "../auth/AuthContext";
 import { DashboardRoutes } from "./DashboardRoutes";
 import { LoginScreen } from "../components/login/LoginScreen";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { HashRouter as Router, Switch } from "react-router-dom";
 
 export const AppRouter = () => {
   const { user } = useContext(AuthContext);
